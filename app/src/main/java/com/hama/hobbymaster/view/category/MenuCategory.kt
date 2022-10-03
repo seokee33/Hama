@@ -9,8 +9,10 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.hama.hobbymaster.R
+import com.hama.hobbymaster.adapter.CategoryOutRvAdapter
+import com.hama.hobbymaster.data.CategoryInRvData
 import com.hama.hobbymaster.databinding.MenuCategoryBinding
-import com.hama.hobbymaster.view.home.MenuHome
+import com.hama.hobbymaster.viewmodel.CategoryOutRvViewModel
 import com.hama.hobbymaster.viewmodel.CategoryViewModel
 
 
@@ -38,7 +40,19 @@ class MenuCategory : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val viewModel = ViewModelProvider(this).get(CategoryViewModel::class.java)
+        val viewModel = ViewModelProvider(this)[CategoryViewModel::class.java]
         binding.categoryViewModel = viewModel
+
+
+        var categoryList:ArrayList<ArrayList<CategoryInRvData>>
+
+        val categoryOutRvViewModel = ViewModelProvider(this)[CategoryOutRvViewModel::class.java]
+        categoryOutRvViewModel.categoryData.observe(requireActivity()){
+            categoryList = it
+            binding.rvCategoryListOut.apply {
+                adapter = CategoryOutRvAdapter(requireContext(),categoryList)
+            }
+        }
+
     }
 }

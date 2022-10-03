@@ -3,13 +3,13 @@
     <data>
         <variable
             name="st"
-            type="com.hama.hobbymaster.model.ShortCut" />
+            type="com.hama.hobbymaster.data.ShortCut" />
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="5dp"
+        android:layout_marginHorizontal="10dp"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical">
         <androidx.cardview.widget.CardView

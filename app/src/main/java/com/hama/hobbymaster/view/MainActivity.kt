@@ -1,13 +1,11 @@
 package com.hama.hobbymaster.view
 
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.hama.hobbymaster.R
 import com.hama.hobbymaster.databinding.ActivityMainBinding
-
 import com.hama.hobbymaster.view.category.MenuCategory
 import com.hama.hobbymaster.view.home.MenuHome
 import com.hama.hobbymaster.view.match.MenuMatch

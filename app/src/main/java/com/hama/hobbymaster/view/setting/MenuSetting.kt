@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.hama.hobbymaster.R
 import com.hama.hobbymaster.databinding.MenuSettingBinding
-import com.hama.hobbymaster.view.home.MenuHome
 import com.hama.hobbymaster.viewmodel.SettingViewModel
 
 

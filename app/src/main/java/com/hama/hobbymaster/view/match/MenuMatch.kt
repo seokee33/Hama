@@ -1,7 +1,6 @@
 package com.hama.hobbymaster.view.match
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,7 +31,6 @@ class MenuMatch : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.menu_match, container, false)
-        Log.d(TAG, "MenuMatch")
 
         return binding.root
     }

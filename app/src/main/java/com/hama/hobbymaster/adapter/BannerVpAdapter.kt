@@ -9,7 +9,7 @@ import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.hama.hobbymaster.R
 import com.hama.hobbymaster.databinding.ItemVpBannerBinding
-import com.hama.hobbymaster.model.BannerData
+import com.hama.hobbymaster.data.BannerData
 
 class BannerVpAdapter(private val listData: LiveData<ArrayList<BannerData>>) :
     RecyclerView.Adapter<ViewHolderPage>() {

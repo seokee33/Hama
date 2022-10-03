@@ -2,27 +2,26 @@ package com.hama.hobbymaster.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.hama.hobbymaster.databinding.RvMenuhomeShortcutBinding
-import com.hama.hobbymaster.model.ShortCut
+import com.hama.hobbymaster.data.ShortCut
 
-class ShortCutRvAdapter (private val data: LiveData<ArrayList<ShortCut>>): RecyclerView.Adapter<ShortCutRvAdapter.MyViewHolder>(){
+class ShortCutRvAdapter (private val data: ArrayList<ShortCut>): RecyclerView.Adapter<ShortCutRvAdapter.MyViewHolder>(){
 
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val rvMenuhomeShortcutBinding = RvMenuhomeShortcutBinding.inflate(inflater, parent, false)
-        return MyViewHolder(rvMenuhomeShortcutBinding)
+        val rvMenuHomeShortcutBinding = RvMenuhomeShortcutBinding.inflate(inflater, parent, false)
+        return MyViewHolder(rvMenuHomeShortcutBinding)
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.bind(data.value!!.get(position))
+        holder.bind(data[position])
     }
 
     override fun getItemCount(): Int {
-        return data.value!!.size
+        return data.size
     }
 
     inner class MyViewHolder(val binding: RvMenuhomeShortcutBinding): RecyclerView.ViewHolder(binding.root) {

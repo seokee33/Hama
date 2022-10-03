@@ -1,6 +1,7 @@
 package com.hama.hobbymaster.model
 
 import com.hama.hobbymaster.R
+import com.hama.hobbymaster.data.BannerData
 
 class BannerDataModel (){
     init {
